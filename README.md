@@ -1,4 +1,33 @@
-# NaughtyBot
+# GamblingAddiction
+
+## ❤️ Support the Developer
+
+If you enjoyed the game and would like to support my work, you can do so here:
+
+**InstaPay:** `+201154002675`
+
+**PayPal:** @mazenelgayar  
+https://www.paypal.me/mazenelgayar
+
+Every bit of support helps me continue learning Unreal Engine and building bigger, better games. Thank you! ❤️
+
+---
+
+## 🎮 Download
+
+https://drive.google.com/drive/folders/14ROhFKIyS6IOJZoCPvn69tL3JJFDgbiY
+
+---
+
+## 👨‍💻 About the Developer
+
+Hi! I'm **Mazen El-Gayar**, a **Senior Flutter Mobile Developer** from Egypt who decided to try something completely different: game development.
+
+**Gambling Addiction** is my very first game—a small Unreal Engine project I built to learn game development and challenge myself outside of mobile apps. Every mechanic, blueprint, and bug fixed has been part of the learning journey.
+
+Thank you for playing my first game. Your feedback and support genuinely mean a lot and will help shape my future projects.
+
+---
 
 Unreal Engine **5.8** Blueprint project (also known as *One More Sphere*): a third-person arena about **gambling addiction** — drones hunt you, floors fall out from under you, and every sphere is a bet.
 
@@ -27,7 +56,7 @@ Player-facing copy you can paste into a Help UI: see [`HELP.md`](HELP.md).
 
 ### Theme
 
-You’re stuck in a loop of risk. Magic balls litter the floor like chips on a table — heal when you can, roll orange and blue when you can’t help yourself. The drones and the dropping floors are the house edge.
+You're stuck in a loop of risk. Magic balls litter the floor like chips on a table—heal when you can, roll orange and blue when you can't help yourself. The drones and the collapsing floors are the house edge.
 
 ### Controls
 
@@ -49,34 +78,16 @@ Input assets live under `Content/Input/` (`IA_Move`, `IA_Look`, `IA_Jump`, `IMC_
 | **Orange** | Destroy drone | `BP_DestroyDroneSphere` | Chance to **destroy a random drone**, or (via `CreateInsteadOfDestroyPercentage`) **spawn a new one** instead |
 | **Blue** | Ally | `BP_SpawnAllySphere` | Chance to **spawn an ally**, or **destroy a random ally** instead |
 
+### Strategy tips
+
+- You **don't have to gamble**. You can survive by letting drones shoot each other or by baiting them onto collapsing floors instead of picking risky magic balls.
+- Orange and blue spheres can help—or make your situation much worse. Decide whether the risk is worth it.
+- Be careful when hiding behind the glass falling-floor cover. If one of your allies throws an **orange sphere**, it may spawn a new drone **inside your hiding spot**, trapping you with nowhere to escape.
+
 ### Death & possession
 
-Drones fire blaster beams (`BP_BlasterBeam`). When your pawn dies, you **possess another living ally** if one remains. You’re only fully out when the last pawn is gone.
+Drones fire blaster beams (`BP_BlasterBeam`). When your pawn dies, you **possess another living ally** if one remains. You're only fully out when the last pawn is gone.
 
 ### Falling floors
 
-`BP_DroppingFloor` pieces start giving way at the **beginning of a round** — keep moving or fall with the bet.
-
-## Project layout
-
-```
-NaughtyBot/
-├── Config/                 # Engine, input, game settings
-├── Content/
-│   ├── BluePrints/         # Drone, spheres, floors, menu
-│   ├── GameModes/          # Including GM_MainMenu
-│   ├── Maps/               # MainMenu, NaughtMap, TestingLevel, …
-│   ├── ThirdPerson/        # Character, controller, default game mode
-│   ├── Widgets/            # Main menu UI (WD_MainMenu, …)
-│   └── …                   # Assets, input, prototyping, starter content
-├── HELP.md                 # In-game / store help text
-└── NaughtyBot.uproject
-```
-
-Default gameplay GameMode: `BP_ThirdPersonGameMode`  
-Main menu GameMode: `GM_MainMenu`
-
-## Notes
-
-- Intermediate editor folders (`Binaries/`, `Intermediate/`, `Saved/`, `DerivedDataCache/`) are gitignored.
-- Large binary assets (`.uasset` / `.umap`) live under `Content/` and should be handled with Git LFS or similar if you scale source control.
+`BP_DroppingFloor` pieces start giving way at the **beginning of a round**—keep
